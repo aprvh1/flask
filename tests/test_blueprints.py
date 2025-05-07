@@ -376,6 +376,7 @@ def test_add_template_filter(app):
     bp = flask.Blueprint("bp", __name__)
 
     def my_reverse(s):
+        print(s)
         return s[::-1]
 
     bp.add_app_template_filter(my_reverse)
