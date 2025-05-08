@@ -137,6 +137,7 @@ def test_blueprint_url_defaults(app, client):
 
     @bp.route("/bar")
     def bar(bar):
+        print("bar")
         return str(bar)
 
     app.register_blueprint(bp, url_prefix="/1", url_defaults={"bar": 23})
